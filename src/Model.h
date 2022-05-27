@@ -16,8 +16,6 @@ private:
     bool wordIsIn(string word);
     bool isOk(string word);
 public:
-    vector<string> parse(string file);
-    vector<string> tokenize(string text);
     string stem(string word);
     string lemmatize(string word);
     Model();

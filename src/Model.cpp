@@ -77,4 +77,3 @@ string Model::lemmatize(string word){
 Model::~Model()
 {
 }
-
