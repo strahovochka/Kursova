@@ -7,32 +7,6 @@ regex Model::suffixes[3] = {regex("(к|ц)$"), regex("(г|з)$"), regex("(х|с)
 
 Model::Model(){}
 
-vector<string> Model::parse(string file){
-    ifstream fin(file);
-    if (!fin) throw "file";
-    string word;
-    vector<string> words_set;
-    while (!fin.eof()) {
-        fin>>word;
-        if (isOk(word) && regex_match(word, regex("[^0-9]+")) && !wordIsIn(word)){
-            words_set.push_back(regex_replace(word, punctuation, ""));
-        }
-    }
-    return words_set;
-}
-
-vector<string> Model::tokenize(string text){
-    vector<string> words_set;
-    unsigned long length = text.length();
-    char str[length+1];
-    strcpy(str, text.c_str());
-    char *pt = strtok(str, " -.,;:'_?!()");
-    while (pt!=NULL) {
-        words_set.push_back(pt);
-        pt = strtok(NULL, " -.,;:'_?!()");
-    }
-    return words_set;
-}
 bool Model::isOk(string word){
     bool word_is_ok = false;
     string vowels = "(а|о|у|и|і|е|я|ї|ю|є)";

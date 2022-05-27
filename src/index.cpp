@@ -1,8 +1,8 @@
 #include <napi.h>
 #include <string>
-#include "Model.cpp"
+#include "Model.h"
 
-Model n = Model();
+//Model n = Model();
 
 Napi::String stemmer(Napi::CallbackInfo &data){
     Napi::Env env = data.Env();
@@ -26,5 +26,8 @@ Napi::Object Init(Napi::Env env, Napi::Object export){
         Napi::Function::New(end, lemmatizator)
     )
 }
+
+Napi::Error::New(env, "Example exception").ThrowAsJavaScriptException();
+return;
 
 NODE_API_MODULE(Model, Init)
