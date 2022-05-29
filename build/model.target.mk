@@ -9,7 +9,6 @@ DEFS_Debug := \
 	'-DV8_DEPRECATION_WARNINGS=1' \
 	'-DV8_DEPRECATION_WARNINGS' \
 	'-DV8_IMMINENT_DEPRECATION_WARNINGS' \
-	'-D_GLIBCXX_USE_CXX11_ABI=1' \
 	'-D_DARWIN_USE_64_BIT_INODE=1' \
 	'-D_LARGEFILE_SOURCE' \
 	'-D_FILE_OFFSET_BITS=64' \
@@ -38,7 +37,7 @@ CFLAGS_C_Debug := \
 
 # Flags passed to only C++ files.
 CFLAGS_CC_Debug := \
-	-std=gnu++14 \
+	-std=gnu++1y \
 	-stdlib=libc++ \
 	-fno-rtti \
 	-fno-exceptions \
@@ -51,14 +50,14 @@ CFLAGS_OBJC_Debug :=
 CFLAGS_OBJCC_Debug :=
 
 INCS_Debug := \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/include/node \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/src \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/deps/openssl/config \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/deps/openssl/openssl/include \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/deps/uv/include \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/deps/zlib \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/deps/v8/include \
-	-I/Users/anastrasok/Desktop/Kursach/node_modules/node-addon-api
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/include/node \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/src \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/openssl/config \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/openssl/openssl/include \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/uv/include \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/zlib \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/v8/include \
+	-I/Users/anastrasok/Desktop/Kursova/node_modules/node-addon-api
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=model' \
@@ -67,7 +66,6 @@ DEFS_Release := \
 	'-DV8_DEPRECATION_WARNINGS=1' \
 	'-DV8_DEPRECATION_WARNINGS' \
 	'-DV8_IMMINENT_DEPRECATION_WARNINGS' \
-	'-D_GLIBCXX_USE_CXX11_ABI=1' \
 	'-D_DARWIN_USE_64_BIT_INODE=1' \
 	'-D_LARGEFILE_SOURCE' \
 	'-D_FILE_OFFSET_BITS=64' \
@@ -93,7 +91,7 @@ CFLAGS_C_Release := \
 
 # Flags passed to only C++ files.
 CFLAGS_CC_Release := \
-	-std=gnu++14 \
+	-std=gnu++1y \
 	-stdlib=libc++ \
 	-fno-rtti \
 	-fno-exceptions \
@@ -106,14 +104,14 @@ CFLAGS_OBJC_Release :=
 CFLAGS_OBJCC_Release :=
 
 INCS_Release := \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/include/node \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/src \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/deps/openssl/config \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/deps/openssl/openssl/include \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/deps/uv/include \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/deps/zlib \
-	-I/Users/anastrasok/Library/Caches/node-gyp/16.15.0/deps/v8/include \
-	-I/Users/anastrasok/Desktop/Kursach/node_modules/node-addon-api
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/include/node \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/src \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/openssl/config \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/openssl/openssl/include \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/uv/include \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/zlib \
+	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/v8/include \
+	-I/Users/anastrasok/Desktop/Kursova/node_modules/node-addon-api
 
 OBJS := \
 	$(obj).target/$(TARGET)/src/Model.o \
@@ -147,6 +145,7 @@ $(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj)/%.cpp FORCE_DO_CMD
 ### Rules for final target.
 LDFLAGS_Debug := \
 	-undefined dynamic_lookup \
+	-Wl,-no_pie \
 	-Wl,-search_paths_first \
 	-mmacosx-version-min=10.13 \
 	-arch x86_64 \
@@ -155,10 +154,12 @@ LDFLAGS_Debug := \
 
 LIBTOOLFLAGS_Debug := \
 	-undefined dynamic_lookup \
+	-Wl,-no_pie \
 	-Wl,-search_paths_first
 
 LDFLAGS_Release := \
 	-undefined dynamic_lookup \
+	-Wl,-no_pie \
 	-Wl,-search_paths_first \
 	-mmacosx-version-min=10.13 \
 	-arch x86_64 \
@@ -167,6 +168,7 @@ LDFLAGS_Release := \
 
 LIBTOOLFLAGS_Release := \
 	-undefined dynamic_lookup \
+	-Wl,-no_pie \
 	-Wl,-search_paths_first
 
 LIBS :=

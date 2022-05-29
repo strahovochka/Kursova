@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Fri May 27 16:04:21 2022
+# Make data base, printed on Sun May 29 13:20:36 2022
 
 # Variables
 
@@ -24,7 +24,7 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/anastrasok/Desktop/Kursach
+CURDIR := /Users/anastrasok/Desktop/Kursova
 # makefile
 SHELL = /bin/sh
 # environment
@@ -36,11 +36,13 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/by/z5mmgsxx71b70n8bjw4hnbvr0000gn/T/vscode-ipc-f178d7b1-a1b7-4abf-9242-74b64a0e6c10.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/by/z5mmgsxx71b70n8bjw4hnbvr0000gn/T/vscode-ipc-794e0bd5-d56b-414f-8164-0221aead99de.sock
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+PATH = /Users/anastrasok/Desktop/CourseWork/emsdk:/Users/anastrasok/Desktop/CourseWork/emsdk/upstream/emscripten:/Users/anastrasok/Desktop/CourseWork/emsdk/node/14.18.2_64bit/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+# environment
+EMSDK_NODE = /Users/anastrasok/Desktop/CourseWork/emsdk/node/14.18.2_64bit/bin/node
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -48,15 +50,19 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.yL8ki535V0/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.LEL0JXYbpM/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /Users/anastrasok/Desktop/Kursach
+SSL_CERT_FILE = /Users/anastrasok/Desktop/CourseWork/emsdk/python/3.9.2_64bit/lib/python3.9/site-packages/certifi/cacert.pem
+# environment
+PWD = /Users/anastrasok/Desktop/Kursova
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+EMSDK_PYTHON = /Users/anastrasok/Desktop/CourseWork/emsdk/python/3.9.2_64bit/bin/python3
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -115,6 +121,8 @@ XPC_SERVICE_NAME = com.microsoft.VSCode.8204
 __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
 # default
 MAKEFILES := 
+# environment
+EM_CONFIG = /Users/anastrasok/Desktop/CourseWork/emsdk/.emscripten
 # automatic
 <F = $(notdir $<)
 # environment
@@ -130,9 +138,11 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 14619
+EMSDK = /Users/anastrasok/Desktop/CourseWork/emsdk
+# environment
+VSCODE_PID = 637
 # variable set hash-table stats:
-# Load=60/1024=6%, Rehash=0, Collisions=1/81=1%
+# Load=65/1024=6%, Rehash=0, Collisions=1/86=1%
 
 # Pattern-specific Variable Values
 
@@ -140,7 +150,7 @@ VSCODE_PID = 14619
 
 # Directories
 
-# . (device 16777224, inode 44531399): 12 files, no impossibilities.
+# . (device 16777220, inode 45534152): 12 files, no impossibilities.
 
 # 12 files, no impossibilities in 1 directories.
 
@@ -214,7 +224,7 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Fri May 27 16:04:21 2022
+# Finished Make data base on Sun May 29 13:20:36 2022
 
  
 make: *** No rule to make target `all'.  Stop.
