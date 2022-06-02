@@ -3,6 +3,7 @@ using namespace std;
 
 regex Model::end ("(я|а|и|і|у|ою|ею|о|е|ю)$");
 regex Model::punctuation ("[^A-Яа-я]");
+regex Model::prefixes ("^(без|роз|через|перед|понад|при|пре|прі|архі)");
 regex Model::suffixes[3] = {regex("(к|ц)$"), regex("(г|з)$"), regex("(х|с)$")};
 
 Model::Model(){}
@@ -51,6 +52,7 @@ bool Model::wordIsIn(string word){
 
 string Model::stem(string word){
     word = regex_replace (word, end, "");//add prefixes
+    word = regex_replace (word, prefixes, "");
     return word;
 }
 
@@ -59,7 +61,7 @@ string Model::lemmatize(string word){
     string save = word;
     if (regex_search(word, regex(suffixes[0]))){
         word = regex_replace (word, regex(suffixes[0]), "");
-        if (regex_search(word, regex("(ра|ни|ки|щи)$"))){
+        if (regex_search(word, regex("(ра|^та|ів|ни|ки|щи)$"))){
             word = save;
         }
     }
@@ -72,7 +74,15 @@ string Model::lemmatize(string word){
     return word;
 }
 
-
+ool WordProcessors::wordIsIn(string word){
+    string check;
+    ifstream fin("Resources/stopwords_list.txt");
+    while (!fin.eof()) {
+        fin>>check;
+        if (!word.compare(check)) return 1;
+    }
+    return 0;
+}
 
 Model::~Model()
 {
