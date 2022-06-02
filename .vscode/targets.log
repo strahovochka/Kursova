@@ -7,7 +7,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
+<<<<<<< HEAD
 # Make data base, printed on Thu Jun  2 17:06:50 2022
+=======
+# Make data base, printed on Thu Jun  2 03:16:06 2022
+>>>>>>> 846d9dc6fcb8321f36c2b792a296c1efc173bb99
 
 # Variables
 
@@ -24,11 +28,11 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/anastrasok/Desktop/Kursova
+CURDIR := /Users/macbook/Documents/IT/YanaPr/Final/Kursova
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"6c87e287770fa80b3245e0a037b935fb.ru","_translationsConfigFile":"/Users/macbook/Library/Application Support/Code/clp/6c87e287770fa80b3245e0a037b935fb.ru/tcf.json","_cacheRoot":"/Users/macbook/Library/Application Support/Code/clp/6c87e287770fa80b3245e0a037b935fb.ru","_resolvedLanguagePackCoreLocation":"/Users/macbook/Library/Application Support/Code/clp/6c87e287770fa80b3245e0a037b935fb.ru/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/Users/macbook/Library/Application Support/Code/clp/6c87e287770fa80b3245e0a037b935fb.ru/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile
@@ -36,11 +40,21 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
+<<<<<<< HEAD
 VSCODE_IPC_HOOK_EXTHOST = /var/folders/by/z5mmgsxx71b70n8bjw4hnbvr0000gn/T/vscode-ipc-a20efef3-d3e1-4618-9940-4aa28ee479e8.sock
+=======
+__CFBundleIdentifier = com.microsoft.VSCode
+>>>>>>> 846d9dc6fcb8321f36c2b792a296c1efc173bb99
 # environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/rg/j1x1plt51xd_qwgn2_h6mhtm0000gn/T/vscode-ipc-1a735bed-7776-465c-b279-edd20a91cfc9.sock
+# environment
+<<<<<<< HEAD
+PATH = /opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+=======
 VSCODE_CWD = /
 # environment
-PATH = /opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+PATH = /Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public
+>>>>>>> 846d9dc6fcb8321f36c2b792a296c1efc173bb99
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -48,27 +62,35 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
+<<<<<<< HEAD
 SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.3qFucJlyPP/Listeners
+=======
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.NBdJKoP7rO/Listeners
+>>>>>>> 846d9dc6fcb8321f36c2b792a296c1efc173bb99
 # automatic
 %F = $(notdir $%)
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
+<<<<<<< HEAD
 PWD = /Users/anastrasok/Desktop/Kursova
+=======
+PWD = /Users/macbook/Documents/IT/YanaPr/Final/Kursova
+>>>>>>> 846d9dc6fcb8321f36c2b792a296c1efc173bb99
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /Users/anastrasok
+HOME = /Users/macbook
 # default
-MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/anastrasok/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CODE_CACHE_PATH = /Users/macbook/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
-LOGNAME = anastrasok
+LOGNAME = macbook
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -80,25 +102,25 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 1
+SHLVL = 2
 # default
 MAKE_VERSION := 3.81
 # environment
-USER = anastrasok
+USER = macbook
 # makefile
 .DEFAULT_GOAL := 
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
 # environment
-TMPDIR = /var/folders/by/z5mmgsxx71b70n8bjw4hnbvr0000gn/T/
+TMPDIR = /var/folders/rg/j1x1plt51xd_qwgn2_h6mhtm0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/anastrasok/Library/Application Support/Code/1.67.2-main.sock
+VSCODE_IPC_HOOK = /Users/macbook/Library/Application Support/Code/1.67.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -106,13 +128,15 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.8204
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.17975439.17975445
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
-__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
+__CF_USER_TEXT_ENCODING = 0x1F5:0x7:0x3E
+# environment
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
@@ -130,9 +154,15 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
+<<<<<<< HEAD
 VSCODE_PID = 4255
 # variable set hash-table stats:
 # Load=60/1024=6%, Rehash=0, Collisions=1/81=1%
+=======
+VSCODE_PID = 20653
+# variable set hash-table stats:
+# Load=62/1024=6%, Rehash=0, Collisions=1/83=1%
+>>>>>>> 846d9dc6fcb8321f36c2b792a296c1efc173bb99
 
 # Pattern-specific Variable Values
 
@@ -140,7 +170,7 @@ VSCODE_PID = 4255
 
 # Directories
 
-# . (device 16777220, inode 45534152): 12 files, no impossibilities.
+# . (device 16777220, inode 18131888): 12 files, no impossibilities.
 
 # 12 files, no impossibilities in 1 directories.
 
@@ -214,7 +244,11 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
+<<<<<<< HEAD
 # Finished Make data base on Thu Jun  2 17:06:50 2022
+=======
+# Finished Make data base on Thu Jun  2 03:16:06 2022
+>>>>>>> 846d9dc6fcb8321f36c2b792a296c1efc173bb99
 
  
 make: *** No rule to make target `all'.  Stop.

@@ -50,14 +50,14 @@ CFLAGS_OBJC_Debug :=
 CFLAGS_OBJCC_Debug :=
 
 INCS_Debug := \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/include/node \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/src \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/openssl/config \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/openssl/openssl/include \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/uv/include \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/zlib \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/v8/include \
-	-I/Users/anastrasok/Desktop/Kursova/node_modules/node-addon-api
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/include/node \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/src \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/deps/openssl/config \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/deps/openssl/openssl/include \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/deps/uv/include \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/deps/zlib \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/deps/v8/include \
+	-I/Users/macbook/Documents/IT/YanaPr/Final/Kursova/node_modules/node-addon-api
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=model' \
@@ -104,14 +104,14 @@ CFLAGS_OBJC_Release :=
 CFLAGS_OBJCC_Release :=
 
 INCS_Release := \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/include/node \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/src \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/openssl/config \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/openssl/openssl/include \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/uv/include \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/zlib \
-	-I/Users/anastrasok/Library/Caches/node-gyp/14.18.2/deps/v8/include \
-	-I/Users/anastrasok/Desktop/Kursova/node_modules/node-addon-api
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/include/node \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/src \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/deps/openssl/config \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/deps/openssl/openssl/include \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/deps/uv/include \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/deps/zlib \
+	-I/Users/macbook/Library/Caches/node-gyp/14.17.1/deps/v8/include \
+	-I/Users/macbook/Documents/IT/YanaPr/Final/Kursova/node_modules/node-addon-api
 
 OBJS := \
 	$(obj).target/$(TARGET)/src/Model.o \
