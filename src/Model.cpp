@@ -74,14 +74,16 @@ string Model::lemmatize(string word){
     return word;
 }
 
-ool WordProcessors::wordIsIn(string word){
+string Model::dictionarySearch(string word){
     string check;
-    ifstream fin("Resources/stopwords_list.txt");
+    string found;
+    ifstream fin("src/texts/dictionary.txt");
     while (!fin.eof()) {
         fin>>check;
-        if (!word.compare(check)) return 1;
+        fin>>found;
+        if (word.compare(check)) return found;
     }
-    return 0;
+    return "not found";
 }
 
 Model::~Model()
