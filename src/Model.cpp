@@ -40,36 +40,50 @@ int Model::getSize(string word){
     return lastIndex;
 }
 
-bool Model::wordIsIn(string word){
-    string check;
-    ifstream fin("Resources/stopwords_list.txt");
+bool Model::wordIsStopWord(string word){
+    char check [256];
+    ifstream fin("src/texts/stopwords_list.txt");
     while (!fin.eof()) {
-        fin>>check;
-        if (!word.compare(check)) return 1;
+        fin.getline(check, 255);
+        if (!word.compare(string(check))) return 1;
     }
     return 0;
 }
 
 string Model::stem(string word){
-    word = regex_replace (word, end, "");//add prefixes
-    word = regex_replace (word, prefixes, "");
+    if (!wordIsStopWord(word) && regex_search(word, end)){
+        word = regex_replace (word, end, "");//add prefixes
+        word = regex_replace (word, prefixes, "");
+    }else{
+        word += " - invalid";
+    }
     return word;
 }
 
 string Model::lemmatize(string word){
-    word = regex_replace (word, end, "");
-    string save = word;
-    if (regex_search(word, regex(suffixes[0]))){
-        word = regex_replace (word, regex(suffixes[0]), "");
-        if (regex_search(word, regex("(ра|^та|ів|ни|ки|щи)$"))){
-            word = save;
+    if (!wordIsStopWord(word) && regex_search(word, end)){
+        word = regex_replace (word, end, "");
+        string save = word;
+        if (regex_search(word, regex(suffixes[0]))){
+            word = regex_replace (word, regex(suffixes[0]), "");
+            if (regex_search(word, regex("(ра|ни|ки|щи)$"))){
+                word = save;
+            }
         }
-    }
-    else if (regex_search(word, regex(suffixes[2]))){
-        word = regex_replace(word, regex(suffixes[2]), "");
-        if (!regex_search(word, regex("(ва|да|ю|ура|ома|уба|ля|бло|пи|у|рі)$"))){
-            word = save;
+        else if (regex_search(word, regex(suffixes[2]))){
+            word = regex_replace(word, regex(suffixes[2]), "");
+            if (!regex_search(word, regex("(ва|да|ю|ура|ома|уба|ля|бло|пи|у|рі|^та)$"))){
+                word = save;
+            }
         }
+        else if (regex_search(word, regex(suffixes[1]))){
+            word = regex_replace(word, regex(suffixes[1]), "");
+            if (!regex_search(word, regex("(^но|йо|юн|ту|ни|ля|дь|ле|ура|бра|пра|ова|два|бло|оло|^ва|рло|оро|ру|бо|на|ар|ря|ілу|слу|фу|омо|змо|емо|дмо|оль|ль|ари)$"))){
+                word = save;
+            }
+        }
+    }else {
+        word += " - invalid";
     }
     return word;
 }
@@ -77,11 +91,12 @@ string Model::lemmatize(string word){
 string Model::dictionarySearch(string word){
     string check;
     string found;
-    ifstream fin("src/texts/dictionary.txt");
+    ifstream fin("src/texts/dict_corp_lt.txt");
     while (!fin.eof()) {
         fin>>check;
         fin>>found;
-        if (word.compare(check)) return found;
+        if (!word.compare(check)) return found;
+        fin.ignore(265, '\n');
     }
     return "not found";
 }

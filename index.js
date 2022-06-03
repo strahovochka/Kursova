@@ -1,15 +1,9 @@
 const modelModule = require("./build/Release/model.node");
 const express = require("express");
-const busboy = require('connect-busboy');
-const path = require('path');
-const fs = require('fs-extra');
 const cors = require("cors");
 const app = express();
-app.use(busboy());
-app.use(express.static(path.join(__dirname, 'public')));
 const port = 3000;
-
-const allowedOrigins = ["www.example1.com", "www.example2.com"];
+console.log("res: "+modelModule.dictSearch("крутіша"));
 app.use(
   cors({
     origin: function (origin, callback) {
@@ -40,20 +34,12 @@ app.get("/api/stemmer/*", (req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify({ data: result }));
 });
-app.route ('/upload').post(function(req, res, next){
-  var fstream;
-  req.pipe(req.busboy);
-  req.busboy.on('file', function(filedname, file, filename){
-    fs.readFile(filename, function(err, data){
-      if (err) {
-        console.log(err);
-      }else{
-        console.log(data);
-        res.setHeader("Content-Type", "application/json");
-        res.end(JSON.stringify({data: this.data}));
-      }
-    });
-  });
+
+app.get("/api/dictSearch/*", (req, res) => {
+  const word = req?.params[0];
+  const result = modelModule.dictSearch(word);
+  res.setHeader("Content-Type", "application/json");
+  res.end(JSON.stringify({ data: result }));
 });
 
 app.listen(port, () => {
