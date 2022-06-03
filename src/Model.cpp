@@ -103,13 +103,16 @@ string Model::dictionarySearch(string word){
     string check;
     string found;
     ifstream fin("src/texts/dict_corp_lt.txt");
-    while (!fin.eof()) {
-        fin>>check;
-        fin>>found;
-        if (!word.compare(check)) return found;
-        fin.ignore(265, '\n');
+    if (!wordIsStopWord(word)){
+        while (!fin.eof()) {
+            fin>>check;
+            fin>>found;
+            if (!word.compare(check)) return found;
+            fin.ignore(265, '\n');
+        }
+        return "not found";
     }
-    return "not found";
+    else return "";
 }
 
 Model::~Model()
