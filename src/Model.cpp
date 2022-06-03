@@ -77,7 +77,7 @@ string Model::lemmatize(string word){
         string save = word;
         if (regex_search(word, regex(suffixes[0]))){
             word = regex_replace (word, regex(suffixes[0]), "");
-            if (regex_search(word, regex("(ра|ни|ки|щи)$"))){
+            if (regex_search(word, regex("(ра|ни|ки|щи|ів|ри)$"))){
                 word = save;
             }
         }
