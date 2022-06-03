@@ -18,7 +18,7 @@ bool Model::isOk(string word){
     bool word_is_ok = false;
     string vowels = "(а|о|у|и|і|е|я|ї|ю|є)";
     if (getSize(word) > 3){
-        if (regex_search(word, regex(vowels)) && !regex_search(word, regex(vowels))){
+        if (regex_search(word, regex(vowels)) && regex_search(word, regex("[^аоуиіеяїює]"))){
             word_is_ok = true;            
         }
     }
